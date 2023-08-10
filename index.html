@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora con Porcentaje</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <input type="text" id="output" disabled />
+      <input type="text" id="resultWithPercentage" disabled />
+      <div class="centar">
+      <input type="number" id="percentageInput" min="1" max="10" value="5" />
+      <button class="button special-button" onclick="clearOutput()">C</button>
+    </div>
+      <br />
+      <div class="button-grid">
+        <button class="button" onclick="appendToOutput('7')">7</button>
+        <button class="button" onclick="appendToOutput('8')">8</button>
+        <button class="button" onclick="appendToOutput('9')">9</button>
+        <button class="button special-button" onclick="appendToOutput('-')">
+          -
+        </button>
+        <button class="button" onclick="appendToOutput('4')">4</button>
+        <button class="button" onclick="appendToOutput('5')">5</button>
+        <button class="button" onclick="appendToOutput('6')">6</button>
+        <button class="button special-button" onclick="appendToOutput('+')">
+          +
+        </button>
+        <button class="button" onclick="appendToOutput('1')">1</button>
+        <button class="button" onclick="appendToOutput('2')">2</button>
+        <button class="button" onclick="appendToOutput('3')">3</button>
+        <button class="button special-button" onclick="appendToOutput('.')">
+          .
+        </button>
+        <button class="button special-button" onclick="backspace()">⌫</button>
+
+        <button class="button" onclick="appendToOutput('0')">0</button>
+        <button class="button wide-button" onclick="calculate()">=</button>
+
+    </div>
+    </div>
+
+    <script src="calculadora.js"></script>
+  </body>
+</html>
