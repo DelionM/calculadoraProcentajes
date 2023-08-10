@@ -1,111 +1,115 @@
-body {
-    font-family:fantasy;
-    background: linear-gradient(to right, blue, white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(45deg, #035FB2, white);
-  overflow: hidden;
-}
+    body {
+        font-family: fantasy;
+        background: linear-gradient(to right, blue, white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(45deg, #035FB2, white);
+        overflow: hidden;
+    }
 
-body::before {
-    content: "";
-    position: absolute;
-    top: -50px; /* Ajusta la posición vertical de las nubes o círculos */
-    left: -50px; /* Ajusta la posición horizontal de las nubes o círculos */
-    width: 100%; /* Ajusta el ancho para cubrir el cuerpo */
-    height: 100%; /* Ajusta el alto para cubrir el cuerpo */
-    background: url('img/circulo.webp') repeat; /* Agrega la ruta de la imagen */
-    opacity: 0.2; /* Ajusta la opacidad para que sea sutil */
-    z-index: -1; /* Detrás del contenido principal */
-  }
+    body::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 100%;
+        height: 100%;
+        background: url('img/circulo.webp') repeat;
+        opacity: 0.2;
+        z-index: -1;
+    }
 
-#calculator {
-    background-color: #000000;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    padding: 3%;
-}
+    #calculator {
+        background-color: #000000;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
 
-#output {
-    width: 100%;
-    height: 30px;
-    font-size: 20px;
-    text-align: right;
-    margin-bottom: 5px;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: #000000;
-    color: white;
-}
+    #output,
+    #percentageInput,
+    #resultWithPercentage {
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        text-align: right;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+    }
 
-#percentageInput{
-    width: 100%;
-    height: 30px;
-    font-size: 20px;
-    text-align: right;
-    margin-bottom: 5px;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: #2F3236;
-    color: white;
-}
+    #output,
+    #resultWithPercentage {
+        background-color: #000000;
+    }
 
-#resultWithPercentage{
-    width: 100%;
-    height: 30px;
-    font-size: 20px;
-    text-align: right;
-    margin-bottom: 5px;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: #000000;
-    color: white;
-}
+    #percentageInput {
+        background-color: #2F3236;
+    }
 
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 8px;
-}
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
 
-.button {
-    width: 100%;
-    height: 80px;
-    font-size: 24px;
-    background-color: #2F3236;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    color: #6697c3;
-}
+    .button {
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+        background-color: #2F3236;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        color: #6697c3;
+    }
 
-.button:hover {
-    background-color: #999;
-}
+    .button:hover {
+        background-color: #999;
+    }
 
-.special-button {
-    background-color: #035FB2;
-    color: aliceblue;
-}
+    .special-button {
+        background-color: #035FB2;
+        color: aliceblue;
+    }
 
+    .special-button:hover {
+        background-color: #035FB2;
+    }
 
-.special-button:hover {
-    background-color: #035FB2;
-}
+    .wide-button {
+        grid-column: span 2;
+        background-color: #035FB2;
+        color: aliceblue;
+    }
 
-.wide-button {
-    grid-column: span 2;
-    background-color: #035FB2;
-    color: aliceblue
-}
+    @media (max-width: 600px) {
+        #calculator {
+         size: 100%;
+         padding: 100%;
+        }
+
+        #percentageInput {
+            margin-bottom: 5px;
+        }
+
+        .button-grid {
+            grid-gap: 5px;
+        }
+
+        .button {
+            font-size: 18px;
+            height: 50px;
+        }
+    }
