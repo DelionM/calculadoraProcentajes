@@ -12,6 +12,12 @@ function clearOutput() {
     currentInput = '';
     output.value = '';
     resultWithPercentage.value = '';
+    percentageInput.value = 5; // Restablecer porcentaje a 5
+}
+
+function backspace() {
+    currentInput = currentInput.slice(0, -1);
+    output.value = currentInput;
 }
 
 function calculate() {
@@ -32,10 +38,4 @@ function calculate() {
         resultWithPercentage.value = 'Error';
         currentInput = '';
     }
-}
-
-
-function backspace() {
-    currentInput = currentInput.slice(0, -1);
-    output.value = currentInput;
 }
