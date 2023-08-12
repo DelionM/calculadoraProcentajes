@@ -41,13 +41,13 @@
     #resultWithPercentage {
         width: 100%;
         height: 40px;
-        font-size: 20px;
+        font-size: 30px;
         text-align: right;
         margin-bottom: 10px;
         border: none;
-        border-radius: 5px;
-        padding: 10px;
+        padding: 1px;
         color: white;
+        
     }
 
     #output,
@@ -56,9 +56,10 @@
     }
 
     #percentageInput {
-        background-color: #2F3236;
+        background-color: #0f1010;
         display: inline;
         padding: 0px;
+        text-align: center;
     }
 
     .button-grid {
